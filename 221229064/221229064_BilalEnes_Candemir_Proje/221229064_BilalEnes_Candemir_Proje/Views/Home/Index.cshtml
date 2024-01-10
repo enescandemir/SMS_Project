@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Student Management System";
+}
+
+<div class="jumbotron mt-4 text-center">
+    <h1 class="display-4">Hello!</h1>
+    <p class="lead">Welcome to our student management system, providing a unique experience in education. Easily manage and update your student information on this platform.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Student List</h5>
+                <p class="card-text">View the list of registered students in the system.</p>
+                <a href="@Url.Action("Index", "Account")" class="btn btn-primary">View List</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add New Student</h5>
+                <p class="card-text">Add a new student to the system.</p>
+                <a href="@Url.Action("Create", "Account")" class="btn btn-success">Add Student</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Update Student</h5>
+                <p class="card-text">Update existing student information.</p>
+                <a href="@Url.Action("Update", "Account")" class="btn btn-warning">Update Student</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Delete Student</h5>
+                <p class="card-text">Delete existing student information.</p>
+                <a href="@Url.Action("Delete", "Account")" class="btn btn-danger">Delete Student</a>
+            </div>
+        </div>
+    </div>
+</div>

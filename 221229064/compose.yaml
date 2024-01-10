@@ -1,0 +1,30 @@
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "reallyStrongPwd123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - 1433:1433
+    networks:
+      - default-network
+  api:
+    build:
+      context: ./WebAPI
+      target: final
+    ports:
+      - 3000:3000
+    networks:
+      - default-network
+      
+  app:
+    build:
+      context: ./221229064_BilalEnes_Candemir_Proje
+      target: final
+    ports:
+      - 5000:5000
+    networks:
+      - default-network
+
+networks:
+  default-network:

@@ -1,0 +1,27 @@
+﻿@model List<_221229064_BilalEnes_Candemir_Proje.Entitites.Account>
+
+<div class="container mt-5">
+    <h1 class="display-4 text-center mb-4">Student Account Informations</h1>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>isActive</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var account in Model)
+            {
+                <tr>
+                    <td>@account.ID</td>
+                    <td>@account.Email</td>
+                    <td>@account.Password</td>
+                    <td>@account.isActive</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
